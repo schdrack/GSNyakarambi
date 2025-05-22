@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trades - GS Nyakarambi Tss</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+               .navbar-nav .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            padding-bottom: 0.3rem;
+            transition: color 0.2s;
+        }
+        .navbar-nav .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:focus,
+        .navbar-nav .nav-link:hover {
+            color: #ffd700 !important;
+        }
+        .navbar-nav .nav-link.active::after,
+        .navbar-nav .nav-link:focus::after,
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+            background: #ffd700;
+        }
+        @media (max-width: 768px) {
+            .carousel-caption h1 {
+                font-size: 1.3rem;
+            }
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+            .navbar-nav .nav-link {
+                font-size: 1rem;
+            }
+        }
+        .contact-section {
+            background: linear-gradient(135deg, #f8fafc 70%, #e3f0ff 100%);
+        }
+        .contact-card {
+            background: #fff;
+            border-radius: 1.2rem;
+            transition: box-shadow 0.2s;
+        }
+        .contact-card:hover {
+            box-shadow: 0 8px 32px 0 rgba(0, 51, 102, 0.15);
+        }
+        .contact-info {
+            min-height: 340px;
+        }
+        .nav-icon-bg {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffd700 60%, #003366 100%);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            margin-right: 7px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .nav-link:hover .nav-icon-bg,
+        .nav-link.active .nav-icon-bg {
+            background: linear-gradient(135deg, #003366 60%, #ffd700 100%);
+            transform: scale(1.08) rotate(-8deg);
+        }
+        .nav-link .nav-icon-bg img {
+            filter: drop-shadow(0 1px 2px #ffd70055);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GS Nyakarambi Tss</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="nav-icon-bg"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/house-door.svg" width="18" class="me-1" alt="Home"></span> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html">
+                            <span class="nav-icon-bg"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/image.svg" width="18" class="me-1" alt="Photos"></span> Photos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trades.html">
+                            <span class="nav-icon-bg"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/gear.svg" width="18" class="me-1" alt="Trades"></span> Trades & sections
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">
+                            <span class="nav-icon-bg"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/building.svg" width="18" class="me-1" alt="Departments"></span> Departments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <span class="nav-icon-bg"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/info-circle.svg" width="18" class="me-1" alt="About"></span> About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">
+                            <span class="nav-icon-bg"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/envelope.svg" width="18" class="me-1" alt="Contact"></span> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Trades Section -->
+    <section class="py-5 bg-light trade-section">
+        <div class="container">
+            <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
+                <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">Our Trades</span>
+            </h2>
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow trade-card">
+                        <div class="card-body text-center">
+                            <div class="trade-icon mb-3 mx-auto bg-warning bg-gradient">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/calculator.svg" width="32" alt="MEG">
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">MEG</h5>
+                            <p class="card-text text-secondary">Learn Mathematics, Economics, and Geography for a strong academic foundation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow trade-card">
+                        <div class="card-body text-center">
+                            <div class="trade-icon mb-3 mx-auto bg-info bg-gradient">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/book.svg" width="32" alt="HEL">
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">HEL</h5>
+                            <p class="card-text text-secondary">History, Economics, and Literature for creative and analytical skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow trade-card">
+                        <div class="card-body text-center">
+                            <div class="trade-icon mb-3 mx-auto bg-success bg-gradient">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/cup-straw.svg" width="32" alt="Food Processing">
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Food Processing</h5>
+                            <p class="card-text text-secondary">Develop skills in food preparation, hygiene, and quality control.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow trade-card">
+                        <div class="card-body text-center">
+                            <div class="trade-icon mb-3 mx-auto bg-danger bg-gradient">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/heart-pulse.svg" width="32" alt="Nursel">
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Nursel</h5>
+                            <p class="card-text text-secondary">Gain knowledge and skills for a caring and impactful role in education and health.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow trade-card">
+                        <div class="card-body text-center">
+                            <div class="trade-icon mb-3 mx-auto bg-primary bg-gradient">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/award.svg" width="32" alt="O Level">
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">O Level</h5>
+                            <p class="card-text text-secondary">Build a solid academic base for further studies and future success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow trade-card">
+                        <div class="card-body text-center">
+                            <div class="trade-icon mb-3 mx-auto bg-secondary bg-gradient">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/pencil.svg" width="32" alt="Primary School">
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Primary School</h5>
+                            <p class="card-text text-secondary">Nurture young minds with quality education and strong values.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+  <footer class="bg-primary text-white py-3 mt-auto" style="position: fixed; left: 0; bottom: 0; width: 100%;">
+        <div class="container text-center">
+            <p class="mb-1">Contact us: <a href="mailto:info@gsnyakarambi.com" class="text-white">info@gsnyakarambi.com</a></p>
+            <div class="footer-links mb-1">
+                <span>Follow us:</span>
+                <a href="https://facebook.com/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/facebook.svg" width="20" alt="Facebook"></a>
+                <a href="https://instagram.com/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/instagram.svg" width="20" alt="Instagram"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/twitter-x.svg" width="20" alt="Twitter"></a>
+                <a href="https://wa.me/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/whatsapp.svg" width="20" alt="WhatsApp"></a>
+            </div>
+            <small>&copy; 2025 GS Nyakarambi Tss. All rights reserved.</small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
