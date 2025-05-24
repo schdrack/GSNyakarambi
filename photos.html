@@ -119,11 +119,30 @@
             transform: scale(1.08) rotate(-2deg);
             filter: brightness(1.08) drop-shadow(0 2px 8px #ffd70055);
         }
+        .feature-card {
+            border-radius: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(0, 51, 102, 0.15);
+            border: 1.5px solid #ffd700;
+        }
+        .icon-circle {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">GS Nyakarambi Tss</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -165,6 +184,7 @@
             </div>
         </div>
     </nav>
+    <div style="height: 70px;"></div>
     <!-- Photo Gallery -->
     <div class="container my-5">
         <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
@@ -257,6 +277,67 @@
             </div>
         </div>
     </div>
+    <!-- School Life Features Section -->
+    <section class="py-5 bg-light" id="school-life-features">
+        <div class="container">
+            <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
+                <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">School Life Highlights</span>
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+                        <div class="icon-circle mb-3 mx-auto bg-warning bg-gradient">
+                            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/camera.svg" width="36" alt="Events">
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">Memorable Events</h5>
+                        <p class="mb-0 text-secondary">Our gallery captures the best moments from sports, cultural days, and academic competitions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+                        <div class="icon-circle mb-3 mx-auto bg-info bg-gradient">
+                            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/people.svg" width="36" alt="Community">
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">Vibrant Community</h5>
+                        <p class="mb-0 text-secondary">See how students, teachers, and staff come together to create a supportive and inclusive environment.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+                        <div class="icon-circle mb-3 mx-auto bg-success bg-gradient">
+                            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/brush.svg" width="36" alt="Creativity">
+                        </div>
+                        <h5 class="fw-bold text-primary mb-2">Creativity & Talent</h5>
+                        <p class="mb-0 text-secondary">Photos showcase our students’ talents in arts, music, and innovation throughout the year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Info Section -->
+    <section class="py-5 bg-white" id="gallery-info">
+        <div class="container">
+            <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
+                <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">About Our Gallery</span>
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="p-4 rounded-4 shadow-sm bg-light">
+                        <p class="lead text-secondary mb-3">
+                            Our photo gallery is a window into daily life at <span class="fw-bold text-primary">GS Nyakarambi Tss</span>. We believe in celebrating achievements, diversity, and the joy of learning through vibrant images.
+                        </p>
+                        <ul class="list-unstyled text-secondary mb-0">
+                            <li><span class="text-primary fw-bold">&#10003;</span> Regularly updated with new photos from school activities</li>
+                            <li><span class="text-primary fw-bold">&#10003;</span> Highlights both academic and extracurricular moments</li>
+                            <li><span class="text-primary fw-bold">&#10003;</span> Shows the spirit and unity of our school community</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-primary text-white py-3 mt-5">
         <div class="container text-center">

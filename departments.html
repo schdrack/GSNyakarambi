@@ -157,13 +157,22 @@
                 font-size: 1rem;
             }
         }
+        .achievement-card, .club-card, .facility-card {
+    border: 1.5px solid #e3f0ff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.achievement-card:hover, .club-card:hover, .facility-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 32px 0 rgba(0, 51, 102, 0.12);
+    border: 1.5px solid #ffd700;
+}
     </style>
 
 <!-- ...existing code... -->
 </head>
 <body>
     <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">GS Nyakarambi Tss</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -205,6 +214,7 @@
             </div>
         </div>
     </nav>
+    <div style="height: 70px;"></div>
     <!-- Departments Section -->
     <section class="py-5 bg-light department-section">
         <div class="container">
@@ -259,8 +269,111 @@
             </div>
         </div>
     </section>
+    <!-- Achievements Section -->
+<section class="py-5 bg-white" id="achievements">
+    <div class="container">
+        <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
+            <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">Department Achievements</span>
+        </h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+                <div class="achievement-card p-4 rounded-4 shadow-sm bg-light">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/trophy.svg" width="38" class="mb-2 text-warning" alt="Trophy">
+                    <h3 class="fw-bold text-primary mb-1">10+</h3>
+                    <p class="mb-0 text-secondary">Science Awards</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="achievement-card p-4 rounded-4 shadow-sm bg-light">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/people.svg" width="38" class="mb-2 text-warning" alt="Clubs">
+                    <h3 class="fw-bold text-primary mb-1">8</h3>
+                    <p class="mb-0 text-secondary">Active Clubs</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="achievement-card p-4 rounded-4 shadow-sm bg-light">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/person-badge.svg" width="38" class="mb-2 text-warning" alt="Teachers">
+                    <h3 class="fw-bold text-primary mb-1">40+</h3>
+                    <p class="mb-0 text-secondary">Qualified Teachers</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="achievement-card p-4 rounded-4 shadow-sm bg-light">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/building.svg" width="38" class="mb-2 text-warning" alt="Facilities">
+                    <h3 class="fw-bold text-primary mb-1">5</h3>
+                    <p class="mb-0 text-secondary">Modern Labs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clubs & Activities Section -->
+<section class="py-5 bg-light" id="clubs">
+    <div class="container">
+        <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
+            <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">Clubs & Activities</span>
+        </h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="club-card p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/people.svg" width="36" class="mb-2 text-primary" alt="Debate Club">
+                    <h5 class="fw-bold text-primary mb-2">Debate Club</h5>
+                    <p class="mb-0 text-secondary">Enhance your public speaking and critical thinking skills in our active debate club.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="club-card p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/heart-pulse.svg" width="36" class="mb-2 text-danger" alt="Sports Club">
+                    <h5 class="fw-bold text-primary mb-2">Sports Club</h5>
+                    <p class="mb-0 text-secondary">Participate in football, volleyball, athletics, and more for a healthy, active lifestyle.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="club-card p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/music-note-beamed.svg" width="36" class="mb-2 text-warning" alt="Music & Arts">
+                    <h5 class="fw-bold text-primary mb-2">Music & Arts</h5>
+                    <p class="mb-0 text-secondary">Express your creativity through music, dance, and visual arts activities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities Section -->
+<section class="py-5 bg-white" id="facilities">
+    <div class="container">
+        <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
+            <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">Our Facilities</span>
+        </h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="facility-card p-4 rounded-4 shadow-sm bg-light h-100 text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/beaker.svg" width="36" class="mb-2 text-info" alt="Science Lab">
+                    <h5 class="fw-bold text-primary mb-2">Science Laboratories</h5>
+                    <p class="mb-0 text-secondary">Modern labs for Physics, Chemistry, and Biology practicals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="facility-card p-4 rounded-4 shadow-sm bg-light h-100 text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/laptop.svg" width="36" class="mb-2 text-primary" alt="ICT Lab">
+                    <h5 class="fw-bold text-primary mb-2">ICT Lab</h5>
+                    <p class="mb-0 text-secondary">Equipped with computers and internet for digital learning.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="facility-card p-4 rounded-4 shadow-sm bg-light h-100 text-center">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/building.svg" width="36" class="mb-2 text-success" alt="Library">
+                    <h5 class="fw-bold text-primary mb-2">Library</h5>
+                    <p class="mb-0 text-secondary">A rich collection of books and resources for all departments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Footer -->
-    <footer class="bg-primary text-white py-3 mt-auto" style="position: fixed; left: 0; bottom: 0; width: 100%;">
+    <footer class="bg-primary text-white py-3 mt-auto">
         <div class="container text-center">
             <p class="mb-1">Contact us: <a href="mailto:info@gsnyakarambi.com" class="text-white">info@gsnyakarambi.com</a></p>
             <div class="footer-links mb-1">
