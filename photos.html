@@ -190,88 +190,88 @@
         <h2 class="text-center mb-5 display-6 fw-bold text-primary" style="letter-spacing:2px;">
             <span style="border-bottom: 4px solid #ffd700; padding-bottom: 6px;">School Photo Gallery</span>
         </h2>
-        <div class="row g-4">
+        <div class="row g-4" id="gallery">
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student5.jpg" class="card-img-top rounded-top" alt="Photo 1">
+                        <img src="images/student5.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 1">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student0.jpg" class="card-img-top rounded-top" alt="Photo 2">
+                        <img src="images/student0.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 2">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student1.jpg" class="card-img-top rounded-top" alt="Photo 3">
+                        <img src="images/student1.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 3">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student2.jpg" class="card-img-top rounded-top" alt="Photo 4">
+                        <img src="images/student2.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 4">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student3.jpg" class="card-img-top rounded-top" alt="Photo 5">
+                        <img src="images/student3.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 5">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student4.jpg" class="card-img-top rounded-top" alt="Photo 6">
+                        <img src="images/student4.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 6">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student4.jpg" class="card-img-top rounded-top" alt="Photo 7">
+                        <img src="images/student4.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 7">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/student1.jpg" class="card-img-top rounded-top" alt="Photo 8">
+                        <img src="images/student1.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 8">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/master1.jpg" class="card-img-top rounded-top" alt="Photo 9">
+                        <img src="images/master1.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 9">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/helo.jpg" class="card-img-top rounded-top" alt="Photo 10">
+                        <img src="images/helo.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 10">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/download.jpg" class="card-img-top rounded-top" alt="Photo 11">
+                        <img src="images/download.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 11">
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="gallery-card card shadow border-0 h-100 overflow-hidden">
                     <div class="gallery-img-wrapper">
-                        <img src="images/moral.jpg" class="card-img-top rounded-top" alt="Photo 12">
+                        <img src="images/moral.jpg" class="card-img-top rounded-top gallery-img" alt="Photo 12">
                     </div>
                 </div>
             </div>
@@ -352,6 +352,45 @@
             <small>&copy; 2025 GS Nyakarambi Tss. All rights reserved.</small>
         </div>
     </footer>
+    <!-- Modal for Image Preview and Download -->
+<div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-labelledby="imagePreviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="imagePreviewModalLabel">Preview & Download</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="previewImage" src="" alt="Preview" class="img-fluid rounded-4 mb-3" style="max-height: 60vh;">
+        <br>
+        <a id="downloadBtn" href="#" download class="btn btn-warning fw-bold">
+            <i class="bi bi-download me-2"></i>Download Image
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add Bootstrap Icons if not already included -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Add click event to all gallery images
+    document.querySelectorAll('.gallery-img').forEach(function(img) {
+        img.addEventListener('click', function() {
+            var src = img.getAttribute('src');
+            var alt = img.getAttribute('alt') || 'Preview';
+            document.getElementById('previewImage').src = src;
+            document.getElementById('previewImage').alt = alt;
+            var downloadBtn = document.getElementById('downloadBtn');
+            downloadBtn.href = src;
+            downloadBtn.setAttribute('download', src.split('/').pop());
+            var modal = new bootstrap.Modal(document.getElementById('imagePreviewModal'));
+            modal.show();
+        });
+    });
+});
+</script>
 </body>
 </html>
